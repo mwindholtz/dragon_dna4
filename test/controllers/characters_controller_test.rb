@@ -7,7 +7,7 @@ class CharactersControllerTest < ActionController::TestCase
     assert_not_nil assigns(:characters)
   end
 
-  test "should get new" do
+  def test_should_get_new
     get :new
     assert_response :success
   end
