@@ -14,6 +14,7 @@ class Monster < Target
   def clone_monster
     attrs = self.attributes
     attrs[:name] = self.name.succ
+    attrs[:id] = nil
     attr_hp = 0 
     self.level.times{ attr_hp += Die.roll(8) }
     attrs[:max_hp] = attrs[:hp] = attr_hp 

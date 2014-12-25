@@ -9,7 +9,7 @@
  <tr><td>Half-Orc</td><td>STR+1, CONS+1, CHR-2</td></tr>  
  <tr><td>Hafling</td> <td>STR+1, DEX+1</td></tr>  
 </table>
-<% form_for(@character) do |f| %>
+<%= form_for(@character) do |f| %>
   <%= f.error_messages %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>

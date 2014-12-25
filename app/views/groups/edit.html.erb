@@ -1,6 +1,6 @@
 <% content_for :header, "Editing group"%>
 
-<% form_for(@group) do |f| %>
+<%= form_for(@group) do |f| %>
   <%= f.error_messages %>
 
   <%= render :partial => 'form', :locals => {:f => f} %>

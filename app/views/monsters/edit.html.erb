@@ -5,7 +5,7 @@
 <%- end -%>
 
 
-<% form_for(@monster) do |f| %>
+<%= form_for(@monster) do |f| %>
   <%= f.error_messages %>
 
   <%= render :partial => 'monsters/form', :locals => {:f => f} %>
