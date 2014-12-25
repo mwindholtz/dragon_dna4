@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/add/!svn/ver/56/trunk/app/views/layouts
+END
+_nav_bar.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/add/!svn/ver/55/trunk/app/views/layouts/_nav_bar.rhtml
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/add/!svn/ver/56/trunk/app/views/layouts/application.html.erb
+END

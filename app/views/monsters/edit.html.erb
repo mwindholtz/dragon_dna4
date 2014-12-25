@@ -1,0 +1,16 @@
+<% content_for :header, "Editing Monster" %>
+<% content_for :second_nav do -%>
+  <li><%= link_to 'Show', @monster %> </li>
+  <li><%= link_to 'Back', monsters_path %></li>
+<%- end -%>
+
+
+<% form_for(@monster) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

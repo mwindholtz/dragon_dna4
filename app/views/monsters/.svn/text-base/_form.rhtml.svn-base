@@ -1,0 +1,49 @@
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :level %><br />
+    <%= f.text_field :level %>
+  </p>
+  <p>
+    Max HP <br/>
+    <%= f.text_field :max_hp %>
+  </p>
+  <p>
+    <%= f.label :hp %><br />
+    <%= f.text_field :hp %>
+  </p>
+  <p>
+    <%= f.label :ac %><br />
+    <%= f.text_field :ac %>
+  </p>
+  <p>Group <%= f.select(:group_id,  [['','']] + Group.find(:all).collect{|g| [g.name, g.id] }) %></p>    
+  <p>
+    <%= f.label :num_attacks %><br />
+    <%= f.text_field :num_attacks %>
+  </p>
+  <p>
+    <%= f.label :damage %><br />
+    <%= f.text_field :damage %>
+  </p>
+  <p>
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </p>
+  <p>
+    <%= f.label :weapons %><br />
+    <%= f.text_area :weapons %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.label :treasures %><br />
+    <%= f.text_area :treasures %>
+  </p>
+  <p>
+    <%= f.label :exp_value %><br />
+    <%= f.text_field :exp_value %>
+  </p>

@@ -1,0 +1,16 @@
+<% content_for :header, "New Group"%>
+<% content_for :second_nav do -%>
+  <li><%= link_to 'Back', groups_path %></li>
+<%- end -%>
+
+
+<% form_for(@group) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+

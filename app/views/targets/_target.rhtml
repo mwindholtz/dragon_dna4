@@ -1,0 +1,22 @@
+<tr>
+  <td> 
+    <%- if @attacker -%>
+      <% me = (@attacker.target == target )%>   
+      <% unless me %>   
+        <%= link_to(image_attack, 
+            new_attack_path(:attacker_id => @attacker.target.id, :defender_id => target.id)) %> 
+      <%- else -%>
+        ---
+      <%- end -%>
+    <%- else -%>  
+      &nbsp;
+    <%- end -%>
+  </td>
+  <td><%= link_to target.name, target %></td>
+  <td><%=h target.level %></td>
+  <td><%=h target.hp %></td>
+  <td><%=h target.ac %></td>
+  <td><%= link_to_edit target %></td>
+  <td><%= link_to_present_individual(target) %></td>
+  <td> </td>
+</tr>

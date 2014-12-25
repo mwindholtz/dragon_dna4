@@ -1,0 +1,12 @@
+<% content_for :header, "Surprise Rolls" %>
+<% content_for :second_nav do %>
+<%- end -%>
+<ul>
+  <%- for party in @parties  %>
+    <li><strong> <%= party.last %></strong> <%= party.first %>.  
+             <%= "Other Surprised" if (party.last < 3)%></li>
+  <% end %>
+</ul>
+<%= render :partial => 'targets/targets_table' %>
+
+

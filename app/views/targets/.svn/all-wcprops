@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/add/!svn/ver/57/trunk/app/views/targets
+END
+_target_header.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/add/!svn/ver/51/trunk/app/views/targets/_target_header.rhtml
+END
+_targets_table.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/add/!svn/ver/61/trunk/app/views/targets/_targets_table.rhtml
+END
+_target.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/add/!svn/ver/61/trunk/app/views/targets/_target.rhtml
+END

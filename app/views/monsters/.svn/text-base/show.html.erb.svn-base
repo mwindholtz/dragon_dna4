@@ -1,0 +1,60 @@
+<% content_for :header, @monster.name %>
+<% content_for :second_nav do -%>
+  <li><%= link_to(image_edit, edit_monster_path(@monster)) %> </li>
+  <li><%= link_to(image_list, monsters_path) %> </li>
+  <li><%= link_to(image_clone, clone_monster_path(@monster), :method => :post)%></li>
+<%- end -%>
+<table> 
+  <tr>
+    <td>Group <%= @monster.group.name %></td>
+    <td>Hit Dice <%= @monster.level %>
+        HP <%= @monster.max_hp %> (<%= @monster.hp %>)
+        AC <%= @monster.ac %>
+    </td>
+  </tr>
+  <tr>
+    <td>Num Attacks:  <%=h @monster.num_attacks %></td>
+
+    <td>Damage: <%=h @monster.damage %> Size <%=h @monster.size %></td>
+  </tr>
+  <tr>
+    <td><strong>Saves: </strong>
+    </td>
+    <td>
+      <% for save_vs in @monster.saving_throws  %>
+        <%= save_vs.first.to_s.upcase %>(<%= save_vs.last.to_s %>)
+      <%- end -%>
+    </td>
+  </tr>
+</table> 
+<div class='clear'>
+
+<%= render :partial => 'targets/targets_table' %>
+<div class='clear'>
+
+<table> 
+    <tr>
+      <th>Weapons</th>
+    </tr>
+    <tr>
+      <td><%= @monster.weapons %></td>
+    </tr>
+    <tr>
+      <th>Notes </th>
+    </tr>
+    <tr>
+      <td><%= @monster.notes %></td>
+    </tr>
+    <tr>
+      <th>Treasures</th>
+    </tr>
+    <tr>
+      <td><%= @monster.treasures %></td>
+    </tr>
+  <tr>
+    <td><b>Exp value:</b>  <%=h @monster.exp_value %></td>
+  </tr>
+</table>
+
+
+

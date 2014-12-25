@@ -1,0 +1,14 @@
+
+clone monster
+character attack monster
+monster attack character
+character attack character
+monster attack monster
+monster groups
+
+generate character stats
+* add tables - fighter 
+add tables - monster
+add tables - magic user
+add tables - clerics
+add tables - thieves

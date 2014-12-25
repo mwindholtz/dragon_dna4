@@ -1,0 +1,12 @@
+  <p>
+    Party Name<br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    Location<br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    Present <br />
+    <%= f.check_box :present %>
+  </p>

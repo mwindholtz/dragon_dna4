@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/add/!svn/ver/57/trunk/app/views/characters
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/add/!svn/ver/56/trunk/app/views/characters/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/add/!svn/ver/57/trunk/app/views/characters/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/add/!svn/ver/56/trunk/app/views/characters/new.html.erb
+END
+_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/add/!svn/ver/57/trunk/app/views/characters/_form.rhtml
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/add/!svn/ver/65/trunk/app/views/characters/show.html.erb
+END

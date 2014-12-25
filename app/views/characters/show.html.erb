@@ -1,0 +1,77 @@
+<% content_for :header, "#{@character.name}, <small><small>#{@character.klass_option_label}(#{@character.level}), #{@character.race_align} </small></small>"%>
+<% content_for :second_nav do -%>
+  <li><%= link_to image_edit, edit_character_path(@character) %> </li>
+  <li><%= link_to image_list, characters_path %></li>
+<% end %>
+
+<table> 
+  <tr>
+    <td>Player</td>
+    <td><%= @character.player %> </td>
+  </tr>
+  <td>
+    <strong>STR</strong>
+    <%= @character.str %>
+    <strong>INT</strong> 
+    <%= @character.int %>
+  </td>
+  <td>
+    <strong>WIZ </strong>
+    <%= @character.wiz %>
+    <strong>DEX</strong>
+    <%= @character.dex %>
+    <strong>CONS</strong>
+    <%= @character.cons %>
+    <strong>CHAR</strong>
+    <%= @character.char %>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><strong>HP</strong> <em><%= @character.hp %></em> <small>(max:<%= @character.max_hp %>)</small> &nbsp;
+        <strong>AC</strong> <em><%= @character.ac %></em>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Saves: </strong>
+    </td>
+    <td>
+      <% for save_vs in @character.saving_throws  %>
+        <strong><%= save_vs.first.to_s.upcase %>: </strong><%= save_vs.last.to_s %> &nbsp;
+      <%- end -%>
+    </td>
+  </tr>
+</table>
+<%= render :partial => 'targets/targets_table' %>
+
+<table id='notes' >
+  <tr>
+    <th>Weapons</th>
+  </tr>
+  <tr>
+    <td><%= @character.weapons %></td>
+  </tr>
+  <tr>
+    <th>Notes </th>
+  </tr>
+  <tr>
+    <td><%= @character.notes %></td>
+  </tr>
+  <tr>
+    <th>Treasures</th>
+  </tr>
+  <tr>
+    <td><%= @character.treasures %></td>
+  </tr>
+  <tr>
+    <th>&nbsp; <hr/></th>
+  </tr>
+  <tr>
+    <td>XP Current <%= @character.exp_pts %></td>
+  </tr>
+  <tr>
+    <td>XP Next Level <%= @character.exp_needed %></td>
+  </tr>
+
+</table>
+

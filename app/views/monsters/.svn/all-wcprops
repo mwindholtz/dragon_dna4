@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/add/!svn/ver/56/trunk/app/views/monsters
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/add/!svn/ver/56/trunk/app/views/monsters/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/add/!svn/ver/56/trunk/app/views/monsters/index.html.erb
+END
+_monster_header.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/add/!svn/ver/41/trunk/app/views/monsters/_monster_header.rhtml
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/add/!svn/ver/56/trunk/app/views/monsters/new.html.erb
+END
+_form.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/add/!svn/ver/66/trunk/app/views/monsters/_form.rhtml
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/add/!svn/ver/66/trunk/app/views/monsters/show.html.erb
+END
+_monster.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/add/!svn/ver/41/trunk/app/views/monsters/_monster.rhtml
+END

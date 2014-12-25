@@ -1,0 +1,15 @@
+  <tr>
+    <td><em><%=h monster.group.name %></em></td>
+    <td><%= link_to monster.name, monster %></td>
+    <td><%=h monster.level %></td>
+    <td><%=h monster.hp %></td>
+    <td><%=h monster.ac %></td>
+    <td><%=h monster.size %></td>
+    <td> </td>
+    <%- unless @character -%>
+      <td><%= link_to image_edit, edit_monster_path(monster) %></td>
+      <td><%= link_to image_delete, monster, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to image_clone, clone_monster_path(monster), :method => :post%></td>
+    <%- end -%>
+    <td></td>
+  </tr>

@@ -1,0 +1,42 @@
+<% content_for :header, "New Attack" %>
+
+<% content_for :second_nav do %>
+  <%= render :partial => 'mod_link', :locals => {:mod => -5} %> 
+  <%= render :partial => 'mod_link', :locals => {:mod => -4} %> 
+  <%= render :partial => 'mod_link', :locals => {:mod => -3} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => -2} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => -1} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 0} %> 
+  <%= render :partial => 'mod_link', :locals => {:mod => 1} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 2} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 3} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 4} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 5} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 6} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 7} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 8} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 9} %>
+  <%= render :partial => 'mod_link', :locals => {:mod => 10} %>
+<%- end -%>
+
+<h2><%= link_to( @attacker.name, @attacker)  %>  Attacking 
+    <%= link_to(@defender.name, @defender) %></h2>
+<h3><%= @attacker.name  %></h3>
+<ul>
+  <li>Level <%= @attacker.level %> <%= @attacker.klass_option_label %></li>
+  <% if @attacker.monster? %>
+    <li>Damage <%= @attacker.damage %> </li>
+  <% else %>
+    <li>Weapons <%= @attacker.weapons %> </li>
+  <%- end -%>
+</ul>
+<h3> <%= @defender.name %></h3>
+<ul>
+  <li>A/C <%= @defender.ac %></li>
+  <li>To hit <strong><%= @to_hit  %></strong> or higher.  hit_mod <strong><%= sprintf("%+d",@hit_mod) %></strong> </li>
+  <li>Rolled (<%= @roll_20 %>)  <strong><%= @mod_roll %></strong>  </li>
+</ul>
+<% hit = @mod_roll >= @to_hit %>
+<h1><%= hit ? "HIT" : "MISS" %></h1>
+<%=  link_to_edit(@defender) %> Edit <%= @defender.name %>
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+party:
+  name: Party of Adventurers
+  location: witches cave
+  present: 1
+
+orc_band:
+  name: Orc Band
+  location: witches cave
+  present: 1

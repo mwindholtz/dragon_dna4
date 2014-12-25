@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/add/!svn/ver/56/trunk/app/views/attacks
+END
+_mod_link.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/add/!svn/ver/55/trunk/app/views/attacks/_mod_link.rhtml
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/add/!svn/ver/56/trunk/app/views/attacks/new.html.erb
+END
+surprise.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/add/!svn/ver/56/trunk/app/views/attacks/surprise.html.erb
+END
+create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/add/!svn/ver/25/trunk/app/views/attacks/create.html.erb
+END

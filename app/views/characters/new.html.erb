@@ -1,0 +1,19 @@
+<% content_for :header, "Create A Character"%>
+<% content_for :second_nav do -%>
+  <li><%= link_to 'Back', characters_path %></li>
+<%- end -%>
+
+<table>
+ <tr><td>Dwarf</td>   <td>CONS+1, CHR-1</td></tr>  
+ <tr><td>Elf</td>     <td>DEX+1, CONS-1</td></tr>  
+ <tr><td>Half-Orc</td><td>STR+1, CONS+1, CHR-2</td></tr>  
+ <tr><td>Hafling</td> <td>STR+1, DEX+1</td></tr>  
+</table>
+<% form_for(@character) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+

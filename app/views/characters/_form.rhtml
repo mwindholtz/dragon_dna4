@@ -1,0 +1,60 @@
+
+<table> 
+  <tr>
+    <td>Name</td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td>Player</td>
+    <td><%= f.text_field :player %></td>
+  </tr>
+  <td>
+    Str 
+    <%= f.text_field :str, :size => 3 %>
+    Int  
+    <%= f.text_field :int, :size => 3 %>
+  </td>
+  <td>
+    Wiz  
+    <%= f.text_field :wiz, :size => 3 %>
+    Dex 
+    <%= f.text_field :dex, :size => 3 %>
+    CONS 
+    <%= f.text_field :cons, :size => 3 %>
+    CHAR 
+    <%= f.text_field :char, :size => 3 %>
+    (<%= @stats[6] if @stats %>)
+    </td>
+  </tr>
+  <tr>
+    <td>Class <%= f.select(:klass_option,  [['','']] + Character.klass_options )%></td>
+    <td>  Race_Align    <%= f.text_field :race_align, :size => 10 %></td>
+  </tr>
+  <tr>
+    <td>Group <%= f.select(:group_id,  [['','']] + Group.find(:all).collect{|g| [g.name, g.id] }) %></td>    
+    <td>Level <%= f.text_field :level, :size => 3 %>
+        HP <%= f.text_field :max_hp, :size => 3 %> Current HP <%= f.text_field :hp, :size => 3 %>
+        AC <%= f.text_field :ac, :size => 3 %>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>XP <%= f.text_field :exp_pts, :size => 8 %>
+        needed <%= f.text_field :exp_needed, :size => 8 %></td>
+  </tr>
+  <tr>
+    <td>Weapons</td>
+    <td><%= f.text_area :weapons %></td>
+  </tr>
+  <tr>
+    <td>Notes </td>
+    <td><%= f.text_area :notes %></td>
+  </tr>
+  <tr>
+    <tr>
+    <td>Treasures</td>
+    <td><%= f.text_area :treasures %></td>
+  </tr>
+  <tr>
+  </tr>
+</table>

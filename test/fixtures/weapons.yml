@@ -1,0 +1,13 @@
+arrow:
+  name: Arrow
+  weight: 2
+  speed: 1
+  medium: d6
+  large:  d6
+
+sword_long:
+  name: Sword, Long
+  weight: 60
+  speed: 5
+  medium:   d8
+  large:    d6

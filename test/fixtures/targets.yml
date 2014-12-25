@@ -1,0 +1,73 @@
+fighter:
+  type: Character
+  name: hacker
+  player: Fighter 01
+  klass_option: F
+  race_align: MyString
+  level: 1
+  hp: 1
+  ac: 8
+  exp_pts: 1
+  str: 1
+  int: 1
+  wiz: 1
+  dex: 1
+  cons: 1
+  char: 1
+  treasures: MyText
+  weapons: MyText
+  notes: MyText
+  exp_needed: 1
+  group: party
+
+magic_user:
+  type: Character
+  name: zapper
+  player: Zapper
+  klass_option: M
+  race_align: MyString
+  level: 1
+  hp: 1
+  ac: 1
+  exp_pts: 1
+  str: 1
+  int: 1
+  wiz: 1
+  dex: 1
+  cons: 1
+  char: 1
+  treasures: MyText
+  weapons: MyText
+  notes: MyText
+  exp_needed: 1
+  group: party
+
+orc:
+  type: Monster
+  name: Orc 001
+  level: 1
+  hp: 6
+  ac: 8
+  num_attacks: 1
+  damage: MyString
+  size: 1
+  treasures: MyText
+  weapons: MyText
+  notes: MyText
+  exp_value: 1
+  group: orc_band
+
+troll:
+  type: Monster
+  name: Troll
+  level: 1
+  hp: 1
+  ac: 1
+  num_attacks: 1
+  damage: MyString
+  size: 1
+  treasures: MyText
+  weapons: MyText
+  notes: MyText
+  exp_value: 1
+  group: orc_band

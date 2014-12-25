@@ -1,0 +1,6 @@
+<ul id='mainNav'> 
+    <li><%= link_to("Characters", characters_path)%></li>
+    <li><%= link_to("Monsters", monsters_path)%>    </li>
+    <li><%= link_to("Groups", groups_path)%>        </li>
+    <li><%= link_to("Surprise", surprise_path)%>    </li>
+</ul>

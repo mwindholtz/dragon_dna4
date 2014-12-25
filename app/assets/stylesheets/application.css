@@ -1,15 +1,115 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body { 
+  background: #ccc url('/images/background.gif') repeat-x; 
+}
+
+.clear {
+  clear: both;
+}
+
+.clear:after {
+  content: '.';
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#mainNav {
+  margin: 0;
+  padding: 0;
+  width: 720px;
+  list-style: none;
+} 
+#mainNav li { 
+  float: left; 
+  background: #F0A810;
+  padding: 3px;
+  height: 27px;
+} 
+
+#secondNav {
+  float: left; 
+  margin: 0;
+  padding: 0;
+  width: 720px;
+  list-style: none;
+} 
+#secondNav li { 
+  float: left; 
+  background: lightblue;
+  padding: 3px;
+  height: 27px;
+} 
+
+#content { 
+  float: left; 
+} 
+
+#content table { 
+  float: left; 
+} 
+
+#content table#notes { 
+  width:80%;
+  float: left; 
+} 
+
+h1 {
+  float: left;   
+}
+
+img {
+  border: 0;
+}

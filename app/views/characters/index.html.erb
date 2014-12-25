@@ -1,0 +1,38 @@
+<% content_for :header, "Characters"%>
+
+
+<% content_for :second_nav do -%>
+  <li><%= link_to "New NPC", new_character_path %></li>
+  <li><%= link_to "New Player" , new_player_path %> </li>
+<% end %>
+
+<table>
+  <tr>
+    <th>Group</th>
+    <th>Name</th>
+    <th>Player</th>
+    <th>Class</th>
+    <th>Race Align</th>
+    <th>Level</th>
+    <th>Hp</th>
+    <th>Ac</th>
+  </tr>
+
+<% for character in @characters %>
+  <tr>
+    <td><em><%= character.group.name %></em></td>
+    <td><%= link_to character.name, character_path(character) %></td>
+    <td><%=h character.player %></td>
+    <td><%=h character.klass_option_label %></td>
+    <td><%=h character.race_align %></td>
+    <td><%=h character.level %></td>
+    <td><%=h character.hp %></td>
+    <td><%=h character.ac %></td>
+    <td><%= link_to image_edit, edit_character_path(character) %></td>
+    <td><%= link_to image_delete, character_path(character), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

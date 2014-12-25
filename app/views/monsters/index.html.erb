@@ -1,0 +1,12 @@
+<% content_for :header, "Monsters"%>
+<% content_for :second_nav do -%>
+  <li><%= link_to image_new, new_monster_path %></li>
+<% end %>
+
+<table>
+<%= render :partial => 'monsters/monster_header' %>
+<%= render :partial => 'monsters/monster', :collection =>  @monsters %>
+</table>
+
+<br />
+

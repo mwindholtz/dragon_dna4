@@ -1,0 +1,18 @@
+<% content_for :header, @group.name %>
+<% content_for :second_nav do -%>
+  <li><%= link_to 'Edit', edit_group_path(@group) %></li> 
+  <li><%= link_to 'Back', groups_path %></li>
+<%- end -%>
+
+
+<p>
+  <b>Present:</b>
+  <%=h @group.present %>
+</p>
+
+<div class='clear'>
+
+<table>
+  <%= render :partial => 'targets/target_header' %>
+  <%= render :partial => 'targets/target', :collection =>  @group.targets %>  
+</table>
