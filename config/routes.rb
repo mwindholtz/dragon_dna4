@@ -1,4 +1,29 @@
 Rails.application.routes.draw do
+  
+  
+  get 'rolls/new',      :action => 'new', :controller => 'rolls'
+
+  resources :characters
+  resources :groups do
+    member do  
+      post :present
+    end
+  end 
+  resources :monsters do
+    member do
+      post :present
+      post :clone
+    end
+  end
+  
+  resources :attacks
+
+  get '/surprise', :controller => 'attacks', :action => 'surprise'
+  
+  get  'new_player',   :action => 'new_player', :controller => 'characters'
+  root :controller => "characters", :action => 'index'
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

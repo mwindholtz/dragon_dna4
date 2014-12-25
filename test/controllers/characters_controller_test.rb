@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require 'test_helper'
 
 class CharactersControllerTest < ActionController::TestCase
   test "should get index" do
@@ -32,7 +32,7 @@ class CharactersControllerTest < ActionController::TestCase
   end
 
   test "should update character" do
-    put :update, :id => targets(:fighter).id, :character => { }
+    put :update, :id => targets(:fighter).id, :character => { weapons: 'dull axe' }
     assert_redirected_to character_path(assigns(:character))
   end
 

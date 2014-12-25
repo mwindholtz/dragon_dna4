@@ -2,6 +2,10 @@ class Target < ActiveRecord::Base
   belongs_to :group
   validates_uniqueness_of :name
   validates_presence_of :name, :hp, :max_hp, :level, :ac, :group_id
+
+  def self.permit_params
+     [ "group_id",  "type",  "name",  "race_align","level", "max_hp","hp","ac","treasures", "weapons",   "notes", "player","klass_option",  "exp_needed","exp_pts",   "str",   "int",   "wiz",   "dex",   "cons",  "char",  "num_attacks",   "damage","size",  "exp_value" ]
+  end
   
   def monster?; false; end  
 

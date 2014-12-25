@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
-    @groups = Group.find(:all)
+    @groups = Group.all.to_a
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(params[:group])
+    @group = Group.new(permit_params)
     if @group.save
       flash[:notice] = 'Group was successfully created.'
       redirect_to(@group)
@@ -39,7 +39,7 @@ class GroupsController < ApplicationController
 
   def update
     @group = Group.find(params[:id])
-    if @group.update_attributes(params[:group])
+    if @group.update_attributes(permit_params)
       flash[:notice] = 'Group was successfully updated.'
       redirect_to(@group)
     else
@@ -52,4 +52,10 @@ class GroupsController < ApplicationController
     @group.destroy
     redirect_to(groups_url)
   end
+  
+  protected
+    def permit_params
+      params.require(:group).permit(:name, :location, :present) 
+    end  
+  
 end

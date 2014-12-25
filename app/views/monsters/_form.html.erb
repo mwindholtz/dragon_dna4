@@ -18,7 +18,7 @@
     <%= f.label :ac %><br />
     <%= f.text_field :ac %>
   </p>
-  <p>Group <%= f.select(:group_id,  [['','']] + Group.find(:all).collect{|g| [g.name, g.id] }) %></p>    
+  <p>Group <%= f.select(:group_id,  [['','']] + Group.all.to_a.collect{|g| [g.name, g.id] }) %></p>    
   <p>
     <%= f.label :num_attacks %><br />
     <%= f.text_field :num_attacks %>

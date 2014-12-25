@@ -16,4 +16,9 @@ class AttacksController < ApplicationController
     @parties = Group.present.collect{|e| [e.name, Die.roll(6)] }
   end
 
+  protected
+    # def permit_params
+    #   params.require(:monster).permit(Target.permit_params) 
+    # end  
+  
 end

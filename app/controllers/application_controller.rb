@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception  
   
   def load_targets
-    @m_targets = Monster.find(:all)
-    @c_targets = Character.find(:all)
+    @m_targets = Monster.all.to_a
+    @c_targets = Character.all.to_a
   end
 
   def load_present_groups

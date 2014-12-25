@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require 'test_helper'
 
 class MonstersControllerTest < ActionController::TestCase
   test "should get index" do
@@ -15,6 +15,7 @@ class MonstersControllerTest < ActionController::TestCase
   test "should create monster" do
     assert_difference('Monster.count') do
       post :create, :monster => monster_attrs
+      assert_equal(  flash[:notice], "Monster was successfully created.")
       assert assigns(:monster).valid?
     end
 

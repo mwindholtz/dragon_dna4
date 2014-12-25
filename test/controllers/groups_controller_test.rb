@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require 'test_helper'
 
 class GroupsControllerTest < ActionController::TestCase
   test "should get index" do
@@ -31,7 +31,7 @@ class GroupsControllerTest < ActionController::TestCase
   end
 
   test "should update group" do
-    put :update, :id => groups(:party).id, :group => { }
+    put :update, :id => groups(:party).id, :group => { location: 'oz' }
     assert_redirected_to group_path(assigns(:group))
   end
 

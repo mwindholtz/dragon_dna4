@@ -3,7 +3,7 @@ class Group < ActiveRecord::Base
   validates_uniqueness_of :name
   validates_presence_of :name
 
-  named_scope :present, :conditions => "present = 1"  
+  scope :present,  -> { where("present = 1")  }
   
   def party?
     name == 'Party'

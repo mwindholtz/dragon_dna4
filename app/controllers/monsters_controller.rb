@@ -8,7 +8,7 @@ class MonstersController < ApplicationController
   end
   
   def index
-    @monsters = Monster.find(:all, :order => :group_id, :include => :group)
+    @monsters = Monster.all.order(:group_id).includes(:group)
   end
 
   def show
@@ -25,7 +25,7 @@ class MonstersController < ApplicationController
   end
 
   def create
-    @monster = Monster.new(params[:monster])
+    @monster = Monster.new(permit_params)
 
     if @monster.save
       flash[:notice] = 'Monster was successfully created.'
@@ -48,7 +48,7 @@ class MonstersController < ApplicationController
 
   def update
     @monster = Monster.find(params[:id])
-    if @monster.update_attributes(params[:monster])
+    if @monster.update_attributes(permit_params)
       flash[:notice] = 'Monster was successfully updated.'
       redirect_to(@monster)
     else
@@ -61,4 +61,10 @@ class MonstersController < ApplicationController
     @monster.destroy
     redirect_to(monsters_url) 
   end
+  
+  protected
+    def permit_params
+      params.require(:monster).permit(Target.permit_params) 
+    end  
+  
 end

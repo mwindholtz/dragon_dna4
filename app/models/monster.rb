@@ -1,6 +1,6 @@
 class Monster < Target
   
-  named_scope :by_level, :order => "level"  
+  scope :by_level, -> { order("level")  }
   def monster?; true; end  
 
   def klass_option_label

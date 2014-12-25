@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   def index
-    @characters = Character.find(:all, :order => :group_id)
+    @characters = Character.all.order(:group_id).to_a
   end
 
   def show
@@ -30,7 +30,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    @character = Character.new(params[:character])
+    @character = Character.new(permit_params)
     if @character.save
       flash[:notice] = 'Character was successfully created.'
       redirect_to character_path(@character)      
@@ -41,7 +41,7 @@ class CharactersController < ApplicationController
 
   def update
     @character = Character.find(params[:id])
-    if @character.update_attributes(params[:character])
+    if @character.update_attributes(permit_params)
       flash[:notice] = 'Character was successfully updated.'
       redirect_to character_path(@character)
     else
@@ -65,5 +65,9 @@ class CharactersController < ApplicationController
       @character.cons = @stats[4]
       @character.char = @stats[5]
     end
+
+    def permit_params
+      params.require(:character).permit(Target.permit_params) 
+    end  
     
 end

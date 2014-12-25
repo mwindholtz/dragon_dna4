@@ -2,13 +2,13 @@ class Character < Target
   validates_uniqueness_of :player
   validates_presence_of :player, :class, :str, :int, :wiz, :dex, :cons, :char, :weapons, :race_align
   
-  named_scope :by_level, :order => "level"  
+  scope :by_level, -> { order("level")  }
   
   selection_options_for :klass_option,
-     [:fighter,    'Fighter'],
-     [:cleric,     'Cleric'],
-     [:thief,      'Thief'],
-     [:magic_user, 'MagicUser']  
+     [:fighter,    'F', 'Fighter'],
+     [:cleric,     'C', 'Cleric'],
+     [:thief,      'T', 'Thief'],
+     [:magic_user, 'M', 'MagicUser']  
      
   def attack_matrix
     klass_strategy.attack_matrix

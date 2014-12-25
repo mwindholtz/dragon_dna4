@@ -31,7 +31,7 @@
     <td>  Race_Align    <%= f.text_field :race_align, :size => 10 %></td>
   </tr>
   <tr>
-    <td>Group <%= f.select(:group_id,  [['','']] + Group.find(:all).collect{|g| [g.name, g.id] }) %></td>    
+    <td>Group <%= f.select(:group_id,  [['','']] + Group.all.to_a.collect{|g| [g.name, g.id] }) %></td>    
     <td>Level <%= f.text_field :level, :size => 3 %>
         HP <%= f.text_field :max_hp, :size => 3 %> Current HP <%= f.text_field :hp, :size => 3 %>
         AC <%= f.text_field :ac, :size => 3 %>
