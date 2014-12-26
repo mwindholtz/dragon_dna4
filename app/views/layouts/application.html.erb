@@ -8,32 +8,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class='container'>
+    <p style="color: green"><%= flash[:notice] %></p>
+    <p style="color: red"><%= flash[:alert] %></p>
 
-<p style="color: green"><%= flash[:notice] %></p>
-<p style="color: red"><%= flash[:alert] %></p>
+    <%= render :partial => 'layouts/nav_bar' %>
+    <ul id='secondNav'>
+       <%= yield(:second_nav) %>
+    </ul>
 
-<%= render :partial => 'layouts/nav_bar' %>
-<ul id='secondNav'>
-   <%= yield(:second_nav) %>
-</ul>
+    <h1><%= yield(:header) %></h1>
+    <div class='clear'/>
+    <div id='content'>
+      <%= yield  %>
+    </div>
+  </div>
 
-<h1><%= yield(:header) %></h1>
-<div class='clear'/>
-<div id='content'>
-  <%= yield  %>
-</div>
-
-<%= javascript_include_tag     "jquery-1.6.2.min.js", "application"
-%>
-
-<% javascript_tag do -%>  
-  $(document).ready(function () {
-    $('#btnRoll').click(function(){ 
-      var dice =   $('#dice').val();
-      roll_dice(dice);
-    });       
-  });       
-<%- end -%>
+<!-- Extra Javascript -->    
+<%= javascript_tag "#{yield :javascript if content_for? :javascript}" %>
 
 </body>
 

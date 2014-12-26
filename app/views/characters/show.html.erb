@@ -1,4 +1,4 @@
-<% content_for :header, "#{@character.name}, <small><small>#{@character.klass_option_label}(#{@character.level}), #{@character.race_align} </small></small>"%>
+<% content_for :header, "#{@character.name}, <small><small>#{@character.klass_option_label}(#{@character.level}), #{@character.race_align} </small></small>".html_safe %>
 <% content_for :second_nav do -%>
   <li><%= link_to image_edit, edit_character_path(@character) %> </li>
   <li><%= link_to image_list, characters_path %></li>
