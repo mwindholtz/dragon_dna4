@@ -13,3 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require_self
+
+
+function roll_dice(dice){ 
+  $.ajax({
+		url:      '/rolls/new',
+		type:     'GET',
+		dataType: "html",
+		data:      { dice: dice}
+        })
+    .error( function( xhr, errorType, exception ) {
+		   alert('roll_dice Ajax GET Error: ' + exception );
+	   })
+ 	.success( function(data) {
+	        $('#roll-result').replaceWith(data);
+	   });
+	;	
+};
