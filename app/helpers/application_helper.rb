@@ -1,5 +1,10 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  
+  def display_errors(f)
+    f.object.errors.full_messages.join(',') 
+  end
+  
   def image_new
     image_tag('add.png', :title => 'New', :align=>"left")
   end

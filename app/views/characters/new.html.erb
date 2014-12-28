@@ -10,7 +10,7 @@
  <tr><td>Hafling</td> <td>STR+1, DEX+1</td></tr>  
 </table>
 <%= form_for(@character) do |f| %>
-  <%= f.error_messages %>
+  <%= display_errors(f) %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>
     <%= f.submit "Create" %>
