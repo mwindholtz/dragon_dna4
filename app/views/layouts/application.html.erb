@@ -23,19 +23,5 @@
       <%= yield  %>
     </div>
   </div>
-
-<!-- Extra Javascript -->    
-<%= javascript_tag "#{yield :javascript if content_for? :javascript}" %>
-
-<%= javascript_tag do -%>  
-  $(document).ready(function () {
-    $('#btnRoll').click(function(){ 
-      var dice =   $('#dice').val();
-      roll_dice(dice);
-    });       
-  });       
-<%- end -%>
-
 </body>
-
 </html>

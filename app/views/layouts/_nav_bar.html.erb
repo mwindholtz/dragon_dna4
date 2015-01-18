@@ -3,6 +3,7 @@
     <li><%= link_to("Monsters", monsters_path)%>    </li>
     <li><%= link_to("Groups", groups_path)%>        </li>
     <li><%= link_to("Surprise", surprise_path)%>    </li>
+    <div id='dice-div'>
     <li>
          <%= text_field_tag( 'dice', nil, :class => "text", :type => 'text', :title=>"Dice", :placeholder => '3d6 + 2', :size => 8  ) %>
          <input type="submit" value="Roll" id='btnRoll'/>
@@ -10,4 +11,5 @@
     <li>
        <span id='roll-result'></span>
     </li>
+   </div>
 </ul>
