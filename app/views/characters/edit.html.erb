@@ -1,11 +1,11 @@
-<% content_for :header, "Editing character" %>
+<% content_for :header, "Editing Character" %>
 <% content_for :second_nav do -%>
   <li><%= link_to 'Show', character_path(@character) %></li>
   <li><%= link_to 'Back', characters_path %></li>
 <%- end -%>
 
 
-<%= form_for(@character) do |f| %>
+<%= simple_form_for(@character) do |f| %>
   <%= display_errors(f) %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p>
