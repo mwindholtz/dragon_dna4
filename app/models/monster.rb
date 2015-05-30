@@ -20,7 +20,12 @@ class Monster < Target
     attrs[:max_hp] = attrs[:hp] = attr_hp 
     Monster.new(attrs)
   end
-   
+
+  # FIXME #1 Hit Dice is not same as Level. 
+  # FIXME #2 attack_matrix column is not the same as Hit Dice  
+  #   
+  #  < 1-1,  1-1, 1, 1+, 2-3+, 4-5+, 6-7+, 8-9+, 10-11+, 12-13+, 14-15+, 16+ 
+  #
   def attack_matrix
     h = Hash.new
     h[-10] = [26, 24, 21, 21, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 19, 19, 18, 18, 17, 17]
